@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "nexpy",
+    "description": "Full-stack application built with FastAPI (Python) and Next.js 14",
+    "stack": {
+      "backend": {
+        "framework": "FastAPI",
+        "language": "Python",
+        "database": ["MongoDB", "Redis"],
+        "auth": "JWT + bcrypt",
+        "server": "Uvicorn"
+      },
+      "frontend": {
+        "framework": "Next.js 14",
+        "language": "JavaScript",
+        "ui": "MUI (Material UI)",
+        "state": "React Query"
+      },
+      "infra": {
+        "containerization": "Docker",
+        "orchestration": "Docker Compose"
+      }
+    }
+  },
+  "agents": {
+    "directory": ".cloud/agents",
+    "available": [
+      "code-generator",
+      "codebase-analyzer",
+      "doc-writer",
+      "test-generator"
+    ]
+  },
+  "commands": {
+    "directory": ".cloud/commands",
+    "available": [
+      "scaffold-router",
+      "scaffold-page",
+      "run-tests",
+      "docker-dev"
+    ]
+  },
+  "skills": {
+    "directory": ".cloud/skills",
+    "available": [
+      "fastapi-patterns",
+      "nextjs-patterns",
+      "mongodb-patterns"
+    ]
+  },
+  "paths": {
+    "backend_routers": "app/routers",
+    "backend_classes": "app/classes",
+    "backend_components": "app/components",
+    "backend_db": "app/db",
+    "frontend_pages": "nextjs/src/pages",
+    "frontend_sections": "nextjs/src/sections",
+    "frontend_api": "nextjs/src/api",
+    "frontend_hooks": "nextjs/src/hooks",
+    "tests": "tests"
+  },
+  "conventions": {
+    "backend_router_prefix": "/api/v1",
+    "password_hashing": "bcrypt via passlib",
+    "token_type": "Bearer JWT",
+    "async": true,
+    "logging": "app/components/logger.py"
+  }
+}
